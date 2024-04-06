@@ -1,0 +1,567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Snake Game: Файл C:/Users/Ilya/Desktop/SnakeGame/Snake.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Snake Game<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Control: Up-w, Down-s, Left-a, Right-d, Exit-x.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_1f4f775762638838cb9e60a40b86017a.html">SnakeGame</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл Snake.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;conio.h&gt;</code><br />
+<code>#include &lt;Windows.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_time_8h_source.html">Time.h</a>&quot;</code><br />
+</div>
+<p><a href="_snake_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:a31793e4efbb182e74f29154fb352f2a5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#a31793e4efbb182e74f29154fb352f2a5">eDirection</a> { <br />
+&#160;&#160;<a class="el" href="_snake_8cpp.html#a31793e4efbb182e74f29154fb352f2a5a679ee5320d66c8322e310daeb2ee99b8">STOP</a> = 0
+, <a class="el" href="_snake_8cpp.html#a31793e4efbb182e74f29154fb352f2a5adb45120aafd37a973140edee24708065">LEFT</a>
+, <a class="el" href="_snake_8cpp.html#a31793e4efbb182e74f29154fb352f2a5aec8379af7490bb9eaaf579cf17876f38">RIGHT</a>
+, <a class="el" href="_snake_8cpp.html#a31793e4efbb182e74f29154fb352f2a5aba595d8bca8bc5e67c37c0a9d89becfa">UP</a>
+, <br />
+&#160;&#160;<a class="el" href="_snake_8cpp.html#a31793e4efbb182e74f29154fb352f2a5a9b0b4a95b99523966e0e34ffdadac9da">DOWN</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a31793e4efbb182e74f29154fb352f2a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Движения змейки  <a href="_snake_8cpp.html#a31793e4efbb182e74f29154fb352f2a5">Подробнее...</a><br /></td></tr>
+<tr class="separator:a31793e4efbb182e74f29154fb352f2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a769404f2985a027a0d626fedfd4de1e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#a769404f2985a027a0d626fedfd4de1e9">Setup</a> ()</td></tr>
+<tr class="memdesc:a769404f2985a027a0d626fedfd4de1e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Производит начальную настройку  <a href="_snake_8cpp.html#a769404f2985a027a0d626fedfd4de1e9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a769404f2985a027a0d626fedfd4de1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d5cf0d8d37b6b17224867eb397c9a16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#a3d5cf0d8d37b6b17224867eb397c9a16">Draw</a> ()</td></tr>
+<tr class="memdesc:a3d5cf0d8d37b6b17224867eb397c9a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рисует карту  <a href="_snake_8cpp.html#a3d5cf0d8d37b6b17224867eb397c9a16">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3d5cf0d8d37b6b17224867eb397c9a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a811b7cf72f3317200595c3a353431608"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#a811b7cf72f3317200595c3a353431608">Input</a> ()</td></tr>
+<tr class="memdesc:a811b7cf72f3317200595c3a353431608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отслеживает ввод  <a href="_snake_8cpp.html#a811b7cf72f3317200595c3a353431608">Подробнее...</a><br /></td></tr>
+<tr class="separator:a811b7cf72f3317200595c3a353431608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee63f92a45ce6f7952620205af92aadb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#aee63f92a45ce6f7952620205af92aadb">Logic</a> ()</td></tr>
+<tr class="memdesc:aee63f92a45ce6f7952620205af92aadb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Логика игры  <a href="_snake_8cpp.html#aee63f92a45ce6f7952620205af92aadb">Подробнее...</a><br /></td></tr>
+<tr class="separator:aee63f92a45ce6f7952620205af92aadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc12d18e19e10b35d361fbb09c7c1d54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#afc12d18e19e10b35d361fbb09c7c1d54">End</a> ()</td></tr>
+<tr class="memdesc:afc12d18e19e10b35d361fbb09c7c1d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конец игры  <a href="_snake_8cpp.html#afc12d18e19e10b35d361fbb09c7c1d54">Подробнее...</a><br /></td></tr>
+<tr class="separator:afc12d18e19e10b35d361fbb09c7c1d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a1fb9f73c50443018c691b0eaf1066004"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#a1fb9f73c50443018c691b0eaf1066004">gameOver</a></td></tr>
+<tr class="memdesc:a1fb9f73c50443018c691b0eaf1066004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конец игры  <a href="_snake_8cpp.html#a1fb9f73c50443018c691b0eaf1066004">Подробнее...</a><br /></td></tr>
+<tr class="separator:a1fb9f73c50443018c691b0eaf1066004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a837aabdd54757cb86d0f66387511753f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#a837aabdd54757cb86d0f66387511753f">width</a> = 20</td></tr>
+<tr class="memdesc:a837aabdd54757cb86d0f66387511753f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ширина поля игры  <a href="_snake_8cpp.html#a837aabdd54757cb86d0f66387511753f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a837aabdd54757cb86d0f66387511753f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf203ce6d49148466b4d64d599c55fb"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#a5bf203ce6d49148466b4d64d599c55fb">heidht</a> = 20</td></tr>
+<tr class="memdesc:a5bf203ce6d49148466b4d64d599c55fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Высота поля игры  <a href="_snake_8cpp.html#a5bf203ce6d49148466b4d64d599c55fb">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5bf203ce6d49148466b4d64d599c55fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6150e0515f7202e2fb518f7206ed97dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#a6150e0515f7202e2fb518f7206ed97dc">x</a></td></tr>
+<tr class="memdesc:a6150e0515f7202e2fb518f7206ed97dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата x змейки  <a href="_snake_8cpp.html#a6150e0515f7202e2fb518f7206ed97dc">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6150e0515f7202e2fb518f7206ed97dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a2f84ed7838f07779ae24c5a9086d33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a></td></tr>
+<tr class="memdesc:a0a2f84ed7838f07779ae24c5a9086d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата y змейки  <a href="_snake_8cpp.html#a0a2f84ed7838f07779ae24c5a9086d33">Подробнее...</a><br /></td></tr>
+<tr class="separator:a0a2f84ed7838f07779ae24c5a9086d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a922ba274ed8539868e51362ed08b1c0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#a922ba274ed8539868e51362ed08b1c0b">fruitX</a></td></tr>
+<tr class="memdesc:a922ba274ed8539868e51362ed08b1c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата x фрукта  <a href="_snake_8cpp.html#a922ba274ed8539868e51362ed08b1c0b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a922ba274ed8539868e51362ed08b1c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac39b351e344dd0f1baa014eabdf100a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#ac39b351e344dd0f1baa014eabdf100a0">fruitY</a></td></tr>
+<tr class="memdesc:ac39b351e344dd0f1baa014eabdf100a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координата y фрукта  <a href="_snake_8cpp.html#ac39b351e344dd0f1baa014eabdf100a0">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac39b351e344dd0f1baa014eabdf100a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef160b7437d94056f1dc59646cd5b87d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#aef160b7437d94056f1dc59646cd5b87d">score</a></td></tr>
+<tr class="memdesc:aef160b7437d94056f1dc59646cd5b87d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очки  <a href="_snake_8cpp.html#aef160b7437d94056f1dc59646cd5b87d">Подробнее...</a><br /></td></tr>
+<tr class="separator:aef160b7437d94056f1dc59646cd5b87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b95cbe50ec8362ed96d80e8499a8e4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#a9b95cbe50ec8362ed96d80e8499a8e4c">tailx</a> [100]</td></tr>
+<tr class="memdesc:a9b95cbe50ec8362ed96d80e8499a8e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координаты хвоста x.  <a href="_snake_8cpp.html#a9b95cbe50ec8362ed96d80e8499a8e4c">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9b95cbe50ec8362ed96d80e8499a8e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d98cbaa6546169cf439300738c1720"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#aa4d98cbaa6546169cf439300738c1720">taily</a> [100]</td></tr>
+<tr class="memdesc:aa4d98cbaa6546169cf439300738c1720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Координаты хвоста y.  <a href="_snake_8cpp.html#aa4d98cbaa6546169cf439300738c1720">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa4d98cbaa6546169cf439300738c1720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa713ed417a9c1f98b71236eec6fd8dcf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#aa713ed417a9c1f98b71236eec6fd8dcf">nTail</a></td></tr>
+<tr class="separator:aa713ed417a9c1f98b71236eec6fd8dcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c6bc967c5a1b06ec93c29c366979e04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_snake_8cpp.html#a31793e4efbb182e74f29154fb352f2a5">eDirection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#a9c6bc967c5a1b06ec93c29c366979e04">dir</a></td></tr>
+<tr class="memdesc:a9c6bc967c5a1b06ec93c29c366979e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущее движение змейки  <a href="_snake_8cpp.html#a9c6bc967c5a1b06ec93c29c366979e04">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9c6bc967c5a1b06ec93c29c366979e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6c6c5044cdf4b3554a1b7afc23295ed"><td class="memItemLeft" align="right" valign="top">SYSTEMTIME&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_snake_8cpp.html#aa6c6c5044cdf4b3554a1b7afc23295ed">t</a></td></tr>
+<tr class="memdesc:aa6c6c5044cdf4b3554a1b7afc23295ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Текущее время  <a href="_snake_8cpp.html#aa6c6c5044cdf4b3554a1b7afc23295ed">Подробнее...</a><br /></td></tr>
+<tr class="separator:aa6c6c5044cdf4b3554a1b7afc23295ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Перечисления</h2>
+<a id="a31793e4efbb182e74f29154fb352f2a5" name="a31793e4efbb182e74f29154fb352f2a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31793e4efbb182e74f29154fb352f2a5">&#9670;&#160;</a></span>eDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_snake_8cpp.html#a31793e4efbb182e74f29154fb352f2a5">eDirection</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Движения змейки </p>
+<table class="fieldtable">
+<tr><th colspan="2">Элементы перечислений</th></tr><tr><td class="fieldname"><a id="a31793e4efbb182e74f29154fb352f2a5a679ee5320d66c8322e310daeb2ee99b8" name="a31793e4efbb182e74f29154fb352f2a5a679ee5320d66c8322e310daeb2ee99b8"></a>STOP&#160;</td><td class="fielddoc"><p >Змейка стоит </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31793e4efbb182e74f29154fb352f2a5adb45120aafd37a973140edee24708065" name="a31793e4efbb182e74f29154fb352f2a5adb45120aafd37a973140edee24708065"></a>LEFT&#160;</td><td class="fielddoc"><p >Змейка движется влево </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31793e4efbb182e74f29154fb352f2a5aec8379af7490bb9eaaf579cf17876f38" name="a31793e4efbb182e74f29154fb352f2a5aec8379af7490bb9eaaf579cf17876f38"></a>RIGHT&#160;</td><td class="fielddoc"><p >Змейка движется вправо </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31793e4efbb182e74f29154fb352f2a5aba595d8bca8bc5e67c37c0a9d89becfa" name="a31793e4efbb182e74f29154fb352f2a5aba595d8bca8bc5e67c37c0a9d89becfa"></a>UP&#160;</td><td class="fielddoc"><p >Змейка движется вверх </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31793e4efbb182e74f29154fb352f2a5a9b0b4a95b99523966e0e34ffdadac9da" name="a31793e4efbb182e74f29154fb352f2a5a9b0b4a95b99523966e0e34ffdadac9da"></a>DOWN&#160;</td><td class="fielddoc"><p >Змейка движется вниз </p>
+</td></tr>
+</table>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00026">26</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a3d5cf0d8d37b6b17224867eb397c9a16" name="a3d5cf0d8d37b6b17224867eb397c9a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d5cf0d8d37b6b17224867eb397c9a16">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Рисует карту </p>
+<p >Выводит на экран поле, очки и текущее время </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00050">50</a></p>
+
+</div>
+</div>
+<a id="afc12d18e19e10b35d361fbb09c7c1d54" name="afc12d18e19e10b35d361fbb09c7c1d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc12d18e19e10b35d361fbb09c7c1d54">&#9670;&#160;</a></span>End()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void End </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конец игры </p>
+<p >Вывод на экран game over при проигрыше </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00182">182</a></p>
+
+</div>
+</div>
+<a id="a811b7cf72f3317200595c3a353431608" name="a811b7cf72f3317200595c3a353431608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a811b7cf72f3317200595c3a353431608">&#9670;&#160;</a></span>Input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Input </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отслеживает ввод </p>
+<p >Отслежиет, что нажал пользователь </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00096">96</a></p>
+
+</div>
+</div>
+<a id="aee63f92a45ce6f7952620205af92aadb" name="aee63f92a45ce6f7952620205af92aadb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee63f92a45ce6f7952620205af92aadb">&#9670;&#160;</a></span>Logic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Logic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Логика игры </p>
+<p >Описывает длину змейки, координаты змейки и её хвоста, координаты фрукта, считает очки </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00123">123</a></p>
+
+</div>
+</div>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00196">196</a></p>
+
+</div>
+</div>
+<a id="a769404f2985a027a0d626fedfd4de1e9" name="a769404f2985a027a0d626fedfd4de1e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a769404f2985a027a0d626fedfd4de1e9">&#9670;&#160;</a></span>Setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Setup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Производит начальную настройку </p>
+<p >Начальная настройка игры </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00037">37</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a9c6bc967c5a1b06ec93c29c366979e04" name="a9c6bc967c5a1b06ec93c29c366979e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c6bc967c5a1b06ec93c29c366979e04">&#9670;&#160;</a></span>dir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_snake_8cpp.html#a31793e4efbb182e74f29154fb352f2a5">eDirection</a> dir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Текущее движение змейки </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00032">32</a></p>
+
+</div>
+</div>
+<a id="a922ba274ed8539868e51362ed08b1c0b" name="a922ba274ed8539868e51362ed08b1c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a922ba274ed8539868e51362ed08b1c0b">&#9670;&#160;</a></span>fruitX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fruitX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координата x фрукта </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00019">19</a></p>
+
+</div>
+</div>
+<a id="ac39b351e344dd0f1baa014eabdf100a0" name="ac39b351e344dd0f1baa014eabdf100a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac39b351e344dd0f1baa014eabdf100a0">&#9670;&#160;</a></span>fruitY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fruitY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координата y фрукта </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00020">20</a></p>
+
+</div>
+</div>
+<a id="a1fb9f73c50443018c691b0eaf1066004" name="a1fb9f73c50443018c691b0eaf1066004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb9f73c50443018c691b0eaf1066004">&#9670;&#160;</a></span>gameOver</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gameOver</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конец игры </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00014">14</a></p>
+
+</div>
+</div>
+<a id="a5bf203ce6d49148466b4d64d599c55fb" name="a5bf203ce6d49148466b4d64d599c55fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf203ce6d49148466b4d64d599c55fb">&#9670;&#160;</a></span>heidht</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int heidht = 20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Высота поля игры </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00016">16</a></p>
+
+</div>
+</div>
+<a id="aa713ed417a9c1f98b71236eec6fd8dcf" name="aa713ed417a9c1f98b71236eec6fd8dcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa713ed417a9c1f98b71236eec6fd8dcf">&#9670;&#160;</a></span>nTail</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int nTail</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Длина змейки </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00024">24</a></p>
+
+</div>
+</div>
+<a id="aef160b7437d94056f1dc59646cd5b87d" name="aef160b7437d94056f1dc59646cd5b87d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef160b7437d94056f1dc59646cd5b87d">&#9670;&#160;</a></span>score</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int score</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Очки </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00021">21</a></p>
+
+</div>
+</div>
+<a id="aa6c6c5044cdf4b3554a1b7afc23295ed" name="aa6c6c5044cdf4b3554a1b7afc23295ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6c6c5044cdf4b3554a1b7afc23295ed">&#9670;&#160;</a></span>t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SYSTEMTIME t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Текущее время </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00033">33</a></p>
+
+</div>
+</div>
+<a id="a9b95cbe50ec8362ed96d80e8499a8e4c" name="a9b95cbe50ec8362ed96d80e8499a8e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b95cbe50ec8362ed96d80e8499a8e4c">&#9670;&#160;</a></span>tailx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int tailx[100]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координаты хвоста x. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00022">22</a></p>
+
+</div>
+</div>
+<a id="aa4d98cbaa6546169cf439300738c1720" name="aa4d98cbaa6546169cf439300738c1720"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4d98cbaa6546169cf439300738c1720">&#9670;&#160;</a></span>taily</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int taily[100]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координаты хвоста y. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00023">23</a></p>
+
+</div>
+</div>
+<a id="a837aabdd54757cb86d0f66387511753f" name="a837aabdd54757cb86d0f66387511753f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a837aabdd54757cb86d0f66387511753f">&#9670;&#160;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int width = 20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ширина поля игры </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00015">15</a></p>
+
+</div>
+</div>
+<a id="a6150e0515f7202e2fb518f7206ed97dc" name="a6150e0515f7202e2fb518f7206ed97dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6150e0515f7202e2fb518f7206ed97dc">&#9670;&#160;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координата x змейки </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00017">17</a></p>
+
+</div>
+</div>
+<a id="a0a2f84ed7838f07779ae24c5a9086d33" name="a0a2f84ed7838f07779ae24c5a9086d33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2f84ed7838f07779ae24c5a9086d33">&#9670;&#160;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int y</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Координата y змейки </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_snake_8cpp_source.html">Snake.cpp</a> строка <a class="el" href="_snake_8cpp_source.html#l00018">18</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>
